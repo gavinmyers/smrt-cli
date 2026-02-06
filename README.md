@@ -3,15 +3,33 @@
 A minimalistic, zero-dependency Node.js CLI toolset for tracking project progress, managing conditions, and executing features according to the **Definition of Done**.
 
 ## Setup
-Ensure you have a `.smrt-cli/.key` file in the project root with the following structure:
-```json
-{
-  "id": "YOUR_KEY_ID",
-  "projectId": "YOUR_PROJECT_ID",
-  "token": "YOUR_SECRET_TOKEN",
-  "apiUrl": "http://localhost:3001/"
-}
-```
+
+This CLI is designed to be installed as a subdirectory within your main project.
+
+1.  **Installation**: Clone or copy this repository into a folder named `smrt-cli` within your project root.
+2.  **Configuration**: Create a configuration directory and file in your project's root directory (parent of this CLI folder).
+
+    **Expected Directory Structure:**
+    ```text
+    my-project/
+    ├── .smrt-cli/        <-- Config directory
+    │   └── .key          <-- Config file
+    ├── smrt-cli/         <-- This CLI toolset (this repo)
+    │   ├── client.js
+    │   └── ...
+    └── ...
+    ```
+
+    **`.key` File Content:**
+    Create `.smrt-cli/.key` with the following JSON structure:
+    ```json
+    {
+      "id": "YOUR_KEY_ID",
+      "projectId": "YOUR_PROJECT_ID",
+      "token": "YOUR_SECRET_TOKEN",
+      "apiUrl": "http://localhost:3001/"
+    }
+    ```
 
 ## Core Workflow
 
