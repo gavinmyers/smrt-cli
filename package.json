@@ -1,0 +1,7 @@
+{
+  "name": "smrt-cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Standalone zero-dependency SMRT CLI scripts",
+  "type": "commonjs"
+}
